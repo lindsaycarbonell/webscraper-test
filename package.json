@@ -1,0 +1,23 @@
+{
+  "name": "webscraper-test",
+  "version": "1.0.0",
+  "description": "web scraper test",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindsaycarbonell/webscraper-test.git"
+  },
+  "keywords": [
+    "web",
+    "scrape"
+  ],
+  "author": "lindsay carbonell",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/lindsaycarbonell/webscraper-test/issues"
+  },
+  "homepage": "https://github.com/lindsaycarbonell/webscraper-test#readme"
+}
