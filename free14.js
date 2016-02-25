@@ -10,7 +10,7 @@ for (var mainIndex = 1; mainIndex <= pageCount2015; mainIndex++){
   console.log("page: " + mainIndex);
   var request = require("request"),
     cheerio = require("cheerio"),
-    url = "http://whopays.scratchmag.net/2015/10/page/" + mainIndex;
+    url = "http://whopays.scratchmag.net/2015/11/page/" + mainIndex;
     console.log(url);
 
   request(url, function (error, response, body) {
@@ -39,6 +39,7 @@ for (var mainIndex = 1; mainIndex <= pageCount2015; mainIndex++){
         //all_entries.push($(entry).html());
 
         all_entries.push({
+          key: i,
           title: all_titles[i],
           range: getTheRange(entry),
           price: getThePrice(entry)
@@ -50,7 +51,7 @@ for (var mainIndex = 1; mainIndex <= pageCount2015; mainIndex++){
 
 if (counter==pageCount2015){
     var json2csv = require('json2csv');
-    var fields = ['title', 'range', 'price'];
+    var fields = ['key', 'title', 'range', 'price'];
 
     json2csv({ data: all_entries, fields: fields }, function(err, csv) {
       if (err) console.log(err);
